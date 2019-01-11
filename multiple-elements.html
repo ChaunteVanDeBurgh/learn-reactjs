@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>multiple elements</title>
+	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+	<div id="container"></div>
+	<script type="text/babel">
+
+		class Display extends React.Component {
+			render() {
+				return(
+					[
+						<div><h1>Hello, World!</h1></div>,
+						<div><p>We can do multiple elements</p></div>,
+						<div><a href="google.com">Google </a>it</div>
+					]
+				);
+			}
+		}
+
+		class FragDisplay extends React.Component {
+			render() {
+				return(
+					<React.Fragment>
+						<p>Another way</p>
+						<p>To send multiple....</p>
+						<p>Unnested elements</p>
+						<p>A better way?</p>
+					</React.Fragment>
+				);
+			}
+		}
+
+		ReactDOM.render(
+			<FragDisplay />,
+			document.querySelector('#container')
+		);
+
+	</script>
+</body>
+
+</html>
