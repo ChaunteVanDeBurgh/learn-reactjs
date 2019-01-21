@@ -14,20 +14,26 @@
 	<script type="text/babel">
 		class Meal extends React.Component {
 			render() {
-				const fishStyle = {
+				const mealStyle = {
+					width: '50%',
 					backgroundColor: 'blue',
 					fontWeight: 'bold',
-					color: 'white'
+					color: 'white',
+					padding: '5rem'
 				};
 
 				return(
-					<div style={fishStyle}>Fish</div>
+					<div style={mealStyle}>
+						<h1>
+							{this.props.protien}
+						</h1>
+					</div>
 				);
 			}
 		}
 
 		ReactDOM.render(
-			<Meal />,
+			<Meal protien="fish"/>,
 			document.querySelector('#container')
 		);
 	</script>
