@@ -15,7 +15,18 @@
 
 		class Button extends React.Component {
 			render() {
-				return <div>Hello, World!</div>;
+				const buttonStyle = {
+					height: '4rem',
+					width: '8rem',
+					display: 'flex',
+					'align-items': 'center',
+					'justify-content': 'center',
+					border: '1px solid grey',
+					'border-radius': '1rem',
+					backgroundColor: '#4286f4',
+					fontSize: '1.3rem'
+				};
+				return <div style={buttonStyle}>Hello, World!</div>;
 			}
 		}
 
