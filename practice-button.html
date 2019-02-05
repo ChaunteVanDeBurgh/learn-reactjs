@@ -14,6 +14,10 @@
 	<script type="text/babel">
 
 		class Button extends React.Component {
+			clickHandler() {
+				alert('Hello, World');
+			}
+
 			render() {
 				const buttonStyle = {
 					height: '4rem',
@@ -27,14 +31,14 @@
 					fontSize: '1.3rem',
 					margin: '.2rem'
 				};
-				return <div style={buttonStyle}>{this.props.children}</div>;
+				return <div style={buttonStyle} onClick={this.clickHandler}>{this.props.children}</div>;
 			}
 		}
 
 		class Display extends React.Component {
 			render() {
 				return <div>
-					<Button>Hello</Button>
+					<Button onClick={this.props.onCLick}>Hello</Button>
 					<Button>World</Button>
 					<Button>What is...</Button>
 					<Button>My Purpose?</Button>
