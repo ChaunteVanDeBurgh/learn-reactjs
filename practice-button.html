@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Style Practice</title>
+	<title>Button</title>
 	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
 	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
@@ -12,30 +12,18 @@
 <body>
 	<div id="container"></div>
 	<script type="text/babel">
-		class Meal extends React.Component {
-			render() {
-				const mealStyle = {
-					width: '50%',
-					backgroundColor: 'blue',
-					fontWeight: 'bold',
-					color: 'white',
-					padding: '5rem'
-				};
 
-				return(
-					<div style={mealStyle}>
-						<h1>
-							{this.props.protien}
-						</h1>
-					</div>
-				);
+		class Button extends React.Component {
+			render() {
+				return <div>Hello, World!</div>;
 			}
 		}
 
 		ReactDOM.render(
-			<Meal protien="fish"/>,
-			document.querySelector('#container')
+			<Button />,
+			document.getElementById('container')
 		);
+
 	</script>
 </body>
 
