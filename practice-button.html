@@ -26,12 +26,12 @@
 					backgroundColor: '#95b6ed',
 					fontSize: '1.3rem'
 				};
-				return <div style={buttonStyle}>Hello, World!</div>;
+				return <div style={buttonStyle}>{this.props.children}</div>;
 			}
 		}
 
 		ReactDOM.render(
-			<Button />,
+			<Button>Hi</Button>,
 			document.getElementById('container')
 		);
 
