@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>React! React! React!</title>
+	<link href="./reset.css" rel="stylesheet" type="text/css">
+	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>	
+
+<body>
+	<div id="container"></div>
+	<script type="text/babel">
+
+
+		class Card extends React.Component {
+			render() {
+				const cardStyle = {
+					backgroundColor: '#eff1ff',
+					width: '14rem',
+					height: '18rem',
+					padding: '.5rem',
+					boxShadow: '1px 1px #bfc8fc',
+					margin: '.5rem'
+				}
+
+				return (
+					<div style={cardStyle}> 
+						<p>Hello, World</p>
+					</div>
+				)
+			}
+		}
+
+		class CardRow extends React.Component {
+			render() {
+				const cardRowStyle = {
+					width: '100%',
+					display: 'inline-flex',
+					justifyContent: 'center',
+				}
+
+				return (
+					<div style={cardRowStyle}> 
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+					</div>
+				)
+			}
+		}
+
+		class Display extends React.Component {
+			render() {
+				return (
+					<div> 
+						<Header />
+						<Jumbotron />
+						<CardRow />
+						<CardRow />
+						<CardRow />
+						<Footer />
+					</div>
+				)
+			}
+		}
+
+		class Header extends React.Component {
+			render() {
+				const headerStyle = {
+					height: '3rem',
+					borderBottom: '1px solid #bfc8fc',
+					display: 'flex',
+					justifyContent: 'space-between',
+					alignItems: 'center'
+				}
+
+				const logoStyle = {
+					paddingLeft: '.5rem'
+				}
+
+				const navStyle = {
+					paddingRight: '.5rem'
+				}
+
+				return (
+					<div style={headerStyle}>
+						<div style={logoStyle}>Logo</div>
+						<div style={navStyle}>navigation</div>
+					</div>
+				)
+			}
+		}
+
+		class Jumbotron extends React.Component {
+			render() {
+				const jumbotronStyle = {
+					display: 'flex',
+					width: '100%',
+					height: '15rem',
+					backgroundColor: '#eff1ff',
+					marginTop: '.5rem',
+				}
+
+				const divStyle = {
+					padding: '1rem'
+				}
+
+				return (
+					<div style={jumbotronStyle}>
+						<div style={divStyle}>
+							<h1>Hello, World!</h1>
+						</div>
+					</div>
+				)
+			}
+		}
+
+		class Footer extends React.Component {
+			render() {
+				const footerStyle = {
+					display: 'flex',
+					justifyContent: 'space-between',
+					alignItems: 'center',
+					width: '100%',
+					height: '3rem',
+					borderTop: '1px solid #bfc8fc',
+					backgroundColor: '#727482',
+					color: 'white'
+				}
+
+				const logoStyle = {
+					display: 'inline-flex',
+					paddingLeft: '.5rem'
+				}
+
+				const cpyStyle = {
+					display: 'inline-flex', 
+					paddingLeft: '1rem'
+				}
+
+				const navStyle = {
+					paddingRight: '1rem'
+				}
+
+				return (
+					<div style={footerStyle}>
+						<div>
+							<div style={logoStyle}>Logo</div>
+							<div style={cpyStyle}>Copyright</div>
+						</div>
+						<div style={navStyle}>Nav</div>
+					</div>
+				)
+			}
+		}
+
+
+		ReactDOM.render(
+			<Display />,
+			document.getElementById('container')
+		);
+
+	</script>
+</body>
+
+</html>
