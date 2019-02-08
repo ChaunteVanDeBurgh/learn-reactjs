@@ -56,9 +56,29 @@
 			render() {
 				return (
 					<div> 
+						<Header />
 						<CardRow />
 						<CardRow />
 						<CardRow />
+					</div>
+				)
+			}
+		}
+
+		class Header extends React.Component {
+			render() {
+				const headerStyle = {
+					height: '3rem',
+					borderBottom: '1px solid #bfc8fc',
+					display: 'flex',
+					justifyContent: 'space-between',
+					alignItems: 'center'
+				}
+
+				return (
+					<div style={headerStyle}>
+						<div>Logo</div>
+						<div>navigation</div>
 					</div>
 				)
 			}
