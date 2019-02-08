@@ -8,7 +8,7 @@
 	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
 	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-</head>
+</head>	
 
 <body>
 	<div id="container"></div>
@@ -78,10 +78,18 @@
 					alignItems: 'center'
 				}
 
+				const logoStyle = {
+					paddingLeft: '.5rem'
+				}
+
+				const navStyle = {
+					paddingRight: '.5rem'
+				}
+
 				return (
 					<div style={headerStyle}>
-						<div>Logo</div>
-						<div>navigation</div>
+						<div style={logoStyle}>Logo</div>
+						<div style={navStyle}>navigation</div>
 					</div>
 				)
 			}
