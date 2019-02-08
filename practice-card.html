@@ -13,6 +13,7 @@
 	<div id="container"></div>
 	<script type="text/babel">
 
+
 		class Card extends React.Component {
 			render() {
 				const cardStyle = {
@@ -20,7 +21,8 @@
 					width: '14rem',
 					height: '18rem',
 					padding: '.5rem',
-					boxShadow: '1px 1px #bfc8fc'
+					boxShadow: '1px 1px #bfc8fc',
+					margin: '.5rem'
 				}
 
 				return (
@@ -31,8 +33,25 @@
 			}
 		}
 
+		class Display extends React.Component {
+			render() {
+				const divStyle = {
+					display: 'inline-flex'
+				}
+
+				return (
+					<div style={divStyle}> 
+						<Card />
+						<Card />
+						<Card />
+						<Card />
+					</div>
+				)
+			}
+		}
+
 		ReactDOM.render(
-			<Card/>,
+			<Display />,
 			document.getElementById('container')
 		);
 
