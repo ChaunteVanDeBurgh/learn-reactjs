@@ -52,8 +52,21 @@
 			}
 		}
 
+		class Display extends React.Component {
+			render() {
+				return (
+					<div> 
+						<CardRow />
+						<CardRow />
+						<CardRow />
+					</div>
+				)
+			}
+		}
+
+
 		ReactDOM.render(
-			<CardRow />,
+			<Display />,
 			document.getElementById('container')
 		);
 
