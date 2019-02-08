@@ -13,6 +13,25 @@
 	<div id="container"></div>
 	<script type="text/babel">
 
+		class Card extends React.Component {
+			render() {
+				const cardStyle = {
+					
+				}
+
+				return (
+					<div style={cardStyle}> 
+						<p>Hello, World</p>
+					</div>
+				)
+			}
+		}
+
+		ReactDOM.render(
+			<Card/>,
+			document.getElementById('container')
+		);
+
 	</script>
 </body>
 
