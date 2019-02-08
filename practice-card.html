@@ -61,6 +61,7 @@
 						<CardRow />
 						<CardRow />
 						<CardRow />
+						<Footer />
 					</div>
 				)
 			}
@@ -104,6 +105,45 @@
 						<div style={divStyle}>
 							<h1>Hello, World!</h1>
 						</div>
+					</div>
+				)
+			}
+		}
+
+		class Footer extends React.Component {
+			render() {
+				const footerStyle = {
+					display: 'flex',
+					justifyContent: 'space-between',
+					alignItems: 'center',
+					width: '100%',
+					height: '3rem',
+					borderTop: '1px solid #bfc8fc',
+					backgroundColor: '#727482',
+					color: 'white'
+				}
+
+				const logoStyle = {
+					display: 'inline-flex',
+					paddingLeft: '.5rem'
+				}
+
+				const cpyStyle = {
+					display: 'inline-flex', 
+					paddingLeft: '1rem'
+				}
+
+				const navStyle = {
+					paddingRight: '1rem'
+				}
+
+				return (
+					<div style={footerStyle}>
+						<div>
+							<div style={logoStyle}>Logo</div>
+							<div style={cpyStyle}>Copyright</div>
+						</div>
+						<div style={navStyle}>Nav</div>
 					</div>
 				)
 			}
