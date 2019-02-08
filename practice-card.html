@@ -33,14 +33,16 @@
 			}
 		}
 
-		class Display extends React.Component {
+		class CardRow extends React.Component {
 			render() {
-				const divStyle = {
-					display: 'inline-flex'
+				const cardRowStyle = {
+					width: '100%',
+					display: 'inline-flex',
+					justifyContent: 'center',
 				}
 
 				return (
-					<div style={divStyle}> 
+					<div style={cardRowStyle}> 
 						<Card />
 						<Card />
 						<Card />
@@ -51,7 +53,7 @@
 		}
 
 		ReactDOM.render(
-			<Display />,
+			<CardRow />,
 			document.getElementById('container')
 		);
 
