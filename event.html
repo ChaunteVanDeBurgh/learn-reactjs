@@ -13,13 +13,16 @@
 	<div id="container"></div>
 	<script type="text/babel">
 		class MyEvent extends React.Component {
+			handleClick() {
+				alert('You clicked it!');
+			}
 			render() {
 				return <div><h1>Hello, World!</h1></div>
 			}
 		}
 
 		ReactDOM.render(
-			<MyEvent />,
+			<MyEvent onClick={this.handleClick} />,
 			document.getElementById('container')
 		);
 
